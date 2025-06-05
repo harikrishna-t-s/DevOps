@@ -16,20 +16,16 @@ variable "project_name" {
   default     = "webapp"
 }
 
-variable "vpc_id" {
-  description = "ID of the VPC"
+variable "vpc_cidr" {
+  description = "CIDR block for the VPC"
   type        = string
-  default     = "main"
+  default     = "10.0.0.0/16"
 }
 
-variable "public_subnet_ids" {
-  description = "List of public subnet IDs"
+variable "availability_zones" {
+  description = "List of availability zones"
   type        = list(string)
-}
-
-variable "private_subnet_ids" {
-  description = "List of private subnet IDs"
-  type        = list(string)
+  default     = ["us-east-1a", "us-east-1b"]
 }
 
 variable "instance_type" {

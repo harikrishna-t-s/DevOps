@@ -1,0 +1,12 @@
+aws_region: "us-east-1"
+project_name: "webapp"
+vpc_cidr: "10.0.0.0/16"
+availability_zones:
+  - "us-east-1a"
+  - "us-east-1b"
+instance_type: "t2.micro"
+ami_id: "ami-0c55b0a94c5895ff9"
+min_size: 2
+max_size: 4
+desired_capacity: 2
+s3_bucket_name: "webapp-static-assets" 
